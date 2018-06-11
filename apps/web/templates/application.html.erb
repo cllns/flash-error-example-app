@@ -5,6 +5,16 @@
     <%= favicon %>
   </head>
   <body>
+    <p>
+      Value of flash[:info]:
+      <%= local(:flash)[:info] || "(nothing at all)" %>
+    </p>
+
+    <p>
+      Value of flash.empty?:
+      <%= local(:flash).empty? %>
+    </p>
+
     <%= yield %>
   </body>
 </html>
